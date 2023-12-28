@@ -16,17 +16,14 @@ public class Viva3 {
         Blackmage blackmage = new Blackmage();
        
         System.out.println("The epic battle has begun");
-        while(true) {
+        while(blackmage.getHp() > 0) {
             int damage = phantom.damage(blackmage);
             blackmage.setHp(blackmage.getHp() - damage);
             
-            if(blackmage.getHp() < 0){
-                
-                System.out.println("The blackmage is defeated...");
-                break;
-            }
+            
             System.out.println(blackmage.toString(damage));
         }
+        System.out.println("The blackmage is defeated");
         
     }
     

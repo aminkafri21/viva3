@@ -83,6 +83,7 @@ class Blackmage {
     }
     
     public void setHp(int hp){
+        hp = Math.max(0, hp);
         this.hp = hp;
     }
     
